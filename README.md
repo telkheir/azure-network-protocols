@@ -11,6 +11,8 @@ This tutorial I examine various network traffic protocols between two Azure virt
       <li>Virtual Machines (Azure)</li>
       <li>Remote Desktop</li>
       <li>WireShark</li>
+      <li>Network Security Groups</li>
+      <li>Various Network Protocols (RDP, ICMP, SSH, etc)</li>
     </ul>
 
 <h2>Operating Systems Used</h2>
