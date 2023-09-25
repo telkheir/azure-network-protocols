@@ -17,7 +17,7 @@ This tutorial will examine various network traffic protocols between two virtual
 
 <h2>Operating Systems Used</h2>
     <ul>
-      <li>Windows 10</li>
+      <li>Windows 10 (22H2)</li>
       <li>Ubuntu Server 20.04</li>
     </ul>
 
@@ -35,7 +35,7 @@ This tutorial will examine various network traffic protocols between two virtual
 <h2>Tutorial</h2>
     <ol>
       <li><h3 id = "step_1">Setting up resouces</h3>
-          For this lab, we need to create a resource group to set up 2 virtual machines in Azure, one running Windows and one running Ubuntu. They need to be in the same region and running on the same network. If you allow the first machine to complete deployment, the second one will be placed in the same network by default. I assigned both machines 2 vcpus and at least 8GB of RAM. Designate each machine a username and password. All other settings can be left on default.
+          For this lab, we need to create a resource group to set up 2 virtual machines in Azure, one running Windows and one running Ubuntu. They need to be in the same resource group, region, and running on the same network. I assigned both machines 2 vcpus and at least 8GB of RAM. Designate each machine a username and password. All other settings can be left on default. If you allow the first machine to complete deployment, the second one will be placed in the same network by default. 
           <br><br>
           [IMAGE - config]
           <br><br>
