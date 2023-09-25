@@ -35,10 +35,8 @@ This tutorial will examine various network traffic protocols between two virtual
 <h2>Tutorial</h2>
     <ol>
       <li><h3 id = "step_1">Setting up resouces</h3>
-          For this lab, we need to create a resource group to set up 2 virtual machines in Azure, one running Windows and one running Ubuntu. They need to be in the same resource group, region, and running on the same network. I assigned both machines 2 vcpus and at least 8GB of RAM. Designate each machine a username and password. All other settings can be left on default. If you allow the first machine to complete deployment, the second one will be placed in the same network by default. 
-          <br><br>
-          [IMAGE - config]
-          <br><br>
+          For this lab, we need to create a resource group to set up 2 virtual machines in Azure, one running Windows and one running Ubuntu. They need to be in the same resource group, region, and running on the same network. I assigned both machines 2 vcpus and at least 8GB of memory. Designate each machine a username and password. All other settings can be left on default. If you allow the first machine to complete deployment, the second one will be placed in the same network by default. 
+          <br>
           Once both machines are done being created, there should be a total of 11 files in the resource group:
               <ul>
                   <li>2 disks</li>
@@ -49,7 +47,8 @@ This tutorial will examine various network traffic protocols between two virtual
                   <li>1 virtual network</li>
               </ul>
           <br>
-          [IMAGE - all files in azure rg]
+          <img alt="network-protocols-vm-files" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/c7047550-4830-456b-ac8b-1a0767678c15">
+          <br>
       </li>
       <li><h3 id = "step_2">Observing ICMP traffic</h3>
           Using Remote Desktop, I accessed the virtual machine running Windows and downloaded WireShark onto it.
