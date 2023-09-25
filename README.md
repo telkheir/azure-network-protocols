@@ -35,7 +35,9 @@ This tutorial will examine various network traffic protocols between two virtual
 <h2>Tutorial</h2>
     <ol>
       <li><h3 id = "step_1">Setting up resouces</h3>
-          For this lab, we need to create a resource group to set up 2 virtual machines in Azure, one running Windows and one running Ubuntu, I named them "Win10VM" and "LinuxVM". They need to be in the same resource group, region, and running on the same network. I assigned both machines 2 vcpus and at least 8GB of memory. Designate each machine a username and password. All other settings can be left on default. If you allow the first machine to complete deployment, the second one will be placed in the same network by default. 
+          For this lab, we need to create a resource group to set up 2 virtual machines in Azure, one running Windows and one running Ubuntu, I named them "Win10VM" and "LinuxVM". They need to be in the same resource group, region, and running on the same network. I assigned both machines 2 vcpus and at least 8GB of memory. Designate each machine a username and password. Note that when creating the Linux virtual machine, the default authentication option is an SSH public key but for this lab, we just want to use a password(see image below). All other settings can be left on default. If you allow the first machine to complete deployment, the second one will be placed in the same network by default. 
+          <br><br>
+          <img width="626" alt="linux-vm-user-pass" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/c5efb898-147a-4de1-ad4b-98fd74da2466">
           <br><br>
           Once both machines are done being created, there should be a total of 11 files in the resource group:
               <ul>
@@ -90,11 +92,9 @@ This tutorial will examine various network traffic protocols between two virtual
           <br>
       </li>
       <li><h3 id = "step_3">Observing SSH traffic</h3>
-          In WireShark, filter the packets by SSH (TCP port 22). This can be done by typing "tcp port == 22J" in the search bar.
-          <br><br>
-          [Image - filtered by SSH/port 22 data packets]
-          <br><br>
-          Now we will use the SSH command to access the Ubuntu virtual machine. To do so, we need the username and password we assigned it, as well as its private IP address. In the command prompt, type in "ssh username@privateip" and enter the password when prompted.
+          In WireShark, filter the packets by SSH. This can be done by typing either "tcp.port == 22" or simply "ssh" in the search bar.
+          <br>
+          We're going to use SSH to access the Ubuntu virtual machine. To do so, we need the username and password we assigned it, as well as its private IP address. In the command prompt, type in "ssh username@privateip" and enter the password when prompted.
           <br><br>
           [Image - command prompt]
           <br><br>
