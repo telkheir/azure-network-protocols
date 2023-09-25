@@ -55,25 +55,25 @@ This tutorial will examine various network traffic protocols between two virtual
           <br><br>
           <img width="960" alt="wireshark" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/8624b1a9-27a5-42cf-911c-f6904bbb5081">
           <br><br>
-          WireShark is an open-source network protocol analyzer. We are going to use it to examine how some network protocols work between the two virtual machines we have. Install and open WireShark and click on the blue fin icon in the top left corner to start capturing packet. There should be an influx of packets being sent and recieved. You can click the red square to stop capturing packets, but we want to continue.
+          WireShark is an open-source network protocol analyzer. We are going to use it to examine how some network protocols work between the two virtual machines we have. Install and open WireShark and click on the blue fin icon in the top left corner to start capturing packet. There should be an influx of packets being sent and recieved. You can click the red square to stop capturing packet, but we want to continue capturing to move on to the next step.
           <br><br>
           <img width="537" alt="wireshark-start-cap" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/ca28f4ce-6c84-4513-bed0-176021ce193f">
           <img width="537" alt="wireshark-stop-cap" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/0673ccfd-028e-41c6-953b-9bc20b49030b">
           <br><br>
-          First, we are going to filter out ICMP traffic only.
+          First, we are going to filter out ICMP traffic only. You can do this by typing "icmp" in the search bar. There should be no packets under this protocol category yet.
           <br><br>
-          [IMAGE - icmp filter]
+          <img width="618" alt="wireshark-icmp-empty" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/31acfdb9-9373-4330-9b4d-44b6b83b73f8">
           <br><br>
-          Using the command, ping the private IP of the Ubuntu virtual machine and observe the actions of the ping request in WireShark. You can get the private IP address from the Virtual Machines Directory in Azure.
+          Using the command prompt, ping the private IP of the Ubuntu virtual machine and observe the actions of the ping request in WireShark. You can get the private IP address from the Virtual Machines Directory in Azure.
           <br><br>
-          [IMAGE - cmd line and maybe wireshark results]
+          <img width="960" alt="wireshark-icmp-cmd1" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/5d699a27-60eb-453b-bc00-0a6b4cd8fdf9">
           <blockquote>
               Note: The Ubuntu VM is not connected to the internet, so you can't ping its public IP address.
           </blockquote>
           <br>
           After examining how the computers send the ICMP data back and forth between each other after a single ping request, I initiated a continuous ping and returned to observe the data packets in wireshark.
           <br><br>
-          [IMAGE- cmd line continuous ping]
+          <img width="960" alt="wireshark-icmp-cmd-cont" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/818e4d4b-caa0-4d86-9289-78f2682d2bfc">
           <br><br>
           Next, I set up a firewall to block any incoming ICMP requests to the Ubuntu virtual machine. To do this, return to Azure and open the Network Security Group of the Ubuntu virtual machine. Navigate to the Inbound Security Rules page and click "Add". 
           <br><br>
