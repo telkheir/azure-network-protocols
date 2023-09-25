@@ -35,8 +35,8 @@ This tutorial will examine various network traffic protocols between two virtual
 <h2>Tutorial</h2>
     <ol>
       <li><h3 id = "step_1">Setting up resouces</h3>
-          For this lab, we need to create a resource group to set up 2 virtual machines in Azure, one running Windows and one running Ubuntu. They need to be in the same resource group, region, and running on the same network. I assigned both machines 2 vcpus and at least 8GB of memory. Designate each machine a username and password. All other settings can be left on default. If you allow the first machine to complete deployment, the second one will be placed in the same network by default. 
-          <br>
+          For this lab, we need to create a resource group to set up 2 virtual machines in Azure, one running Windows and one running Ubuntu, I named them "Win10VM" and "LinuxVM". They need to be in the same resource group, region, and running on the same network. I assigned both machines 2 vcpus and at least 8GB of memory. Designate each machine a username and password. All other settings can be left on default. If you allow the first machine to complete deployment, the second one will be placed in the same network by default. 
+          <br><br>
           Once both machines are done being created, there should be a total of 11 files in the resource group:
               <ul>
                   <li>2 disks</li>
@@ -51,11 +51,11 @@ This tutorial will examine various network traffic protocols between two virtual
           <br>
       </li>
       <li><h3 id = "step_2">Observing ICMP traffic</h3>
-          Using Remote Desktop, I accessed the virtual machine running Windows and downloaded WireShark onto it.
+          Using Remote Desktop, I accessed the virtual machine running Windows, downloaded, and installed WireShark onto it.
           <br><br>
-          [IMAGE - wireshark]
+          <img width="960" alt="wireshark" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/8624b1a9-27a5-42cf-911c-f6904bbb5081">
           <br><br>
-          WireShark is an open-source packet-analyzer, we will use it to examine how some network protocols work between the two virtual machines we have. Install and open WireShark to allow it to start capturing packets. First, we are going to filter out ICMP traffic only.
+          WireShark is an open-source network protocol analyzer. We are going to use it to examine how some network protocols work between the two virtual machines we have. Install and open WireShark to allow it to start capturing packets. First, we are going to filter out ICMP traffic only.
           <br><br>
           [IMAGE - icmp filter]
           <br><br>
