@@ -51,15 +51,20 @@ This tutorial will examine various network traffic protocols between two virtual
           <br>
       </li>
       <li><h3 id = "step_2">Observing ICMP traffic</h3>
-          Using Remote Desktop, I accessed the virtual machine running Windows, downloaded, and installed WireShark onto it.
+          Using Remote Desktop, I accessed the virtual machine running Windows and downloaded WireShark onto it.
           <br><br>
           <img width="960" alt="wireshark" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/8624b1a9-27a5-42cf-911c-f6904bbb5081">
           <br><br>
-          WireShark is an open-source network protocol analyzer. We are going to use it to examine how some network protocols work between the two virtual machines we have. Install and open WireShark to allow it to start capturing packets. First, we are going to filter out ICMP traffic only.
+          WireShark is an open-source network protocol analyzer. We are going to use it to examine how some network protocols work between the two virtual machines we have. Install and open WireShark and click on the blue fin icon in the top left corner to start capturing packet. There should be an influx of packets being sent and recieved. You can click the red square to stop capturing packets, but we want to continue.
+          <br><br>
+          <img width="537" alt="wireshark-start-cap" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/ca28f4ce-6c84-4513-bed0-176021ce193f">
+          <img width="537" alt="wireshark-stop-cap" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/0673ccfd-028e-41c6-953b-9bc20b49030b">
+          <br><br>
+          First, we are going to filter out ICMP traffic only.
           <br><br>
           [IMAGE - icmp filter]
           <br><br>
-          Using the command, ping the private IP of the Ubuntu virtual machine and observe the actions of the ping request in WireShark.
+          Using the command, ping the private IP of the Ubuntu virtual machine and observe the actions of the ping request in WireShark. You can get the private IP address from the Virtual Machines Directory in Azure.
           <br><br>
           [IMAGE - cmd line and maybe wireshark results]
           <blockquote>
