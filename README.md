@@ -75,9 +75,10 @@ This tutorial will examine various network traffic protocols between two virtual
           <br><br>
           <img width="960" alt="wireshark-icmp-cmd-cont" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/818e4d4b-caa0-4d86-9289-78f2682d2bfc">
           <br><br>
-          Next, I set up a firewall to block any incoming ICMP requests to the Ubuntu virtual machine. To do this, return to Azure and open the Network Security Group of the Ubuntu virtual machine. Navigate to the Inbound Security Rules page and click "Add". 
+          Next, I set up a firewall to block any incoming ICMP requests to the Ubuntu virtual machine. To do this, return to Azure and open the Network Security Group of the Linux virtual machine. Navigate to the Inbound Security Rules page and click "Add". 
           <br><br>
-          [IMAGE - navigation & rules overview]
+          <img width="960" alt="network-linux-nav" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/a18d0033-2e17-4191-8fe0-0cd41ced8688">
+          <img width="710" alt="network-linux-icmp-rule" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/3386f92c-2182-47f4-8038-863949ddcb58">
           <br><br>
           Return to the Windows VM to see the ping fail to return any data in the command line and WireShark no longer recieving any data packets back from the Ubuntu VM.
           <br><br>
