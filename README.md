@@ -76,16 +76,17 @@ This tutorial will examine various network traffic protocols between two virtual
           <img width="960" alt="wireshark-icmp-cmd-cont" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/818e4d4b-caa0-4d86-9289-78f2682d2bfc">
           <br><br>
           Next, I set up a firewall to block any incoming ICMP requests to the Ubuntu virtual machine. To do this, return to Azure and open the Networking tab of the Linux VM. Click on "Add inbound port rule". Set the protocol to ICMP, the action to Deny, and add the rule.
-          Security Group of the Linux virtual machine. Navigate to the Inbound Security Rules page and click "Add". 
           <br><br>
           <img width="960" alt="network-linux-nav" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/a18d0033-2e17-4191-8fe0-0cd41ced8688">
           <img width="710" alt="network-linux-icmp-rule" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/3386f92c-2182-47f4-8038-863949ddcb58">
           <br><br>
           Return to the Windows VM to see the ping fail to return any data in the command line and WireShark no longer recieving any data packets back from the Ubuntu VM.
           <br><br>
-          [IMAGE - failed ping in cmd and wireshark]
+          <img width="960" alt="wireshark-icmp-blocked" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/3454c96c-a04a-4371-b93e-78ae5a49df50">
           <br><br>
-          Turn off the new rule and observe the requests going through once again. Turn off the continuous ping in the command line with CTRL + C.
+          Turn off the new rule in Azure by setting the action back to Allow, click Add, and observe the echo requests going through once again. Turn off the continuous ping in the command line with CTRL + C.
+          <br><br>
+          <img width="960" alt="wireshark-icmp-allow" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/786350fa-51fe-496f-8116-02214d23fbd1">
           <br>
       </li>
       <li><h3 id = "step_3">Observing SSH traffic</h3>
