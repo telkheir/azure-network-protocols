@@ -1,5 +1,3 @@
-[IMAGE - banner - some network concept map or wireshark or w/e]
-
 <h1>Inspecting Traffic between Virtual Machines in Azure</h1>
 
 This tutorial will examine various network traffic protocols between two virtual machines created in Azure.
@@ -112,8 +110,6 @@ This tutorial will examine various network traffic protocols between two virtual
       </li>
       <li><h3 id = "step_6">Observing RDP traffic</h3>
           Filter by RDP traffic (TCP port 3389) in WireShark. Traffic should be non-stop because Remote Desktop Protocol is continuously showing us a livestream of the Windows virtual machine we are presently working on.
-          <br><br>
-          [image - wireshark ig]
       </li>
       <li><h3 id = "step_7">Cleaning up</h3>
           End the remote connection and return to Azure to delete both virtual machines and the resource group they reside in.
