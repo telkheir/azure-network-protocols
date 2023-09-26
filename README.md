@@ -106,7 +106,7 @@ This tutorial will examine various network traffic protocols between two virtual
           <img width="960" alt="wireshark-dhcp" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/b68f1d95-7e41-48cb-8fe6-8dc8e8276417">
       </li>
       <li><h3 id = "step_5">Observing DNS traffic</h3>
-          Filter by DNS (udp port 53) traffic in WireShark and use nslookup in the command line to obtain the IP address(es) of a public website. I chose disney.com for my example.
+          Filter by DNS (UDP port 53) traffic in WireShark and use nslookup in the command line to obtain the IP address(es) of a public website. I chose disney.com for my example.
           <br><br>
           <img width="960" alt="wireshark-dns" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/08f82405-c2e2-4a49-a503-4d4d6f3fc59e">
       </li>
