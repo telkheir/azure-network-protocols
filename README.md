@@ -101,14 +101,14 @@ This tutorial will examine various network traffic protocols between two virtual
           We can observe the data traffic in WireShark whenever we type in commands through SSH. Type 'Exit' in the command prompt to end the SSH connection.
       </li>
       <li><h3 id = "step_4">Observing DHCP traffic</h3>
-          Now we will filter for DHCP, or UDP ports 67 and 68, traffic in WireShark. In the command prompt, type "ipconfig / renew". This command tells our Windows virtual machine to broadcast on the network a request to the DHCP servers for a new IP address.
+          Now we will filter for DHCP, or UDP ports 67 and 68, traffic in WireShark. In the command prompt, type "ipconfig/renew". This command tells our Windows virtual machine to broadcast on the network a request to the DHCP servers for a new IP address. In the image below, we can see two packets in Wireshark, one for our request and a second for the server's acknowledgement of our request.
           <br><br>
           <img width="960" alt="wireshark-dhcp" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/b68f1d95-7e41-48cb-8fe6-8dc8e8276417">
       </li>
       <li><h3 id = "step_5">Observing DNS traffic</h3>
-          Filter by DNS (port 53) traffic in WireShark and use nslookup on the command line to obtain the IP address(es) of Google.
+          Filter by DNS (udp port 53) traffic in WireShark and use nslookup in the command line to obtain the IP address(es) of a public website. I chose disney.com for my example.
           <br><br>
-          [image - command line and wireshark in back]
+          <img width="960" alt="wireshark-dns" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/08f82405-c2e2-4a49-a503-4d4d6f3fc59e">
       </li>
       <li><h3 id = "step_6">Observing RDP traffic</h3>
           Filter by RDP traffic (TCP port 3389) in WireShark. Traffic should be non-stop because Remote Desktop Protocol is continuously showing us a livestream of the Windows virtual machine we are presently working on.
