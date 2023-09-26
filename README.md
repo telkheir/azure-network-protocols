@@ -94,9 +94,9 @@ This tutorial will examine various network traffic protocols between two virtual
       <li><h3 id = "step_3">Observing SSH traffic</h3>
           In WireShark, filter the packets by SSH. This can be done by typing either "tcp.port == 22" or simply "ssh" in the search bar.
           <br>
-          We're going to use SSH to access the Ubuntu virtual machine. To do so, we need the username and password we assigned it, as well as its private IP address. In the command prompt, type in "ssh username@privateip" and enter the password when prompted.
+          We're going to use SSH to access the Linux virtual machine. To do so, we need the username and password we assigned it, as well as its private IP address. In the command prompt, type in "ssh username@privateip" and enter the password when prompted.
           <br><br>
-          [Image - command prompt]
+          <img width="960" alt="wireshark-ssh-linux" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/bf435d85-3cb0-4316-bd6d-1bd7992b8ecb">
           <br><br>
           We can observe the data traffic in WireShark whenever we type in commands through SSH. Type 'Exit' in the command prompt to end the SSH connection.
       </li>
