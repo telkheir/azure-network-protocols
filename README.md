@@ -103,7 +103,7 @@ This tutorial will examine various network traffic protocols between two virtual
       <li><h3 id = "step_4">Observing DHCP traffic</h3>
           Now we will filter for DHCP, or UDP ports 67 and 68, traffic in WireShark. In the command prompt, type "ipconfig / renew". This command tells our Windows virtual machine to broadcast on the network a request to the DHCP servers for a new IP address.
           <br><br>
-          [image - cmd prompt and also some wireshark same image only one]
+          <img width="960" alt="wireshark-dhcp" src="https://github.com/telkheir/azure-network-protocols/assets/145223639/b68f1d95-7e41-48cb-8fe6-8dc8e8276417">
       </li>
       <li><h3 id = "step_5">Observing DNS traffic</h3>
           Filter by DNS (port 53) traffic in WireShark and use nslookup on the command line to obtain the IP address(es) of Google.
