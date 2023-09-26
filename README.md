@@ -1,6 +1,6 @@
 <h1>Inspecting Traffic between Virtual Machines in Azure</h1>
 
-This tutorial will examine various network traffic protocols between two virtual machines created in Azure.
+This tutorial will examine various network protocols between two virtual machines created in Azure.
 
 
 <h2>Environments and Technologies Used</h2>
